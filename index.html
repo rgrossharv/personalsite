@@ -6,24 +6,26 @@
   <title>Ryland Gross</title>
   <style>
     :root{
-      --text:#111;
-      --muted:#333;
-      --light:#f7f7f7;
-      --rule:#222;
-      --link:#1a0dab;
+      --text:#1d1d1d;
+      --muted:#4a4a4a;
+      --rule:#cfc9bc;
+      --link:#1d4f8d;
+      --paper:#f8f7f2;
+      --card:#fffdfa;
+      --title:#111;
     }
     *{ box-sizing:border-box; }
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, "Iowan Old Style", serif;
       color: var(--text);
-      background: #fff;
+      background: linear-gradient(180deg, #fcfbf8 0%, var(--paper) 100%);
     }
     a{ color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
     a:hover{ opacity: 0.85; }
 
     .wrap{
-      max-width: 1100px;
+      max-width: 980px;
       margin: 0 auto;
       padding: 56px 28px 70px;
     }
@@ -37,10 +39,12 @@
     }
 
     h1{
-      font-size: 44px;
-      font-weight: 500;
+      font-size: 46px;
+      font-weight: 600;
       letter-spacing: -0.5px;
       margin: 0 0 48px;
+      color: var(--title);
+      font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
     }
 
     .infoGrid{
@@ -48,7 +52,7 @@
       grid-template-columns: 180px 1fr;
       gap: 10px 32px;
       max-width: 680px;
-      font-size: 20px;
+      font-size: 19px;
       line-height: 1.45;
     }
     .label{
@@ -61,16 +65,24 @@
       grid-template-columns: 220px 1fr;
       gap: 28px 36px;
       align-items:start;
-      font-size: 20px;
+      font-size: 19px;
       line-height: 1.6;
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      padding: 20px 22px;
     }
     .sectionTitle{
       font-weight: 700;
       font-size: 26px;
+      color: var(--title);
+      font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
     }
     .subTitle{
       font-weight: 700;
       font-size: 22px;
+      color: var(--title);
+      font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
     }
 
     .mono{
@@ -149,12 +161,14 @@
       <div class="sectionTitle">Projects</div>
       <div>
         <div class="subTitle">
-          <a href="https://github.com/rgrossharv/LeanTeX" target="_blank" rel="noreferrer">
+          <a href="https://rgrossharv.github.io/LeanTeX/" target="_blank" rel="noreferrer">
             LeanTeX
           </a>
         </div>
         <br>
         I am also actively working on LeanTeX, a toolchain for embedding Lean 4 snippets directly in LaTeX and rendering Lean output/diagnostics in the compiled PDF.
+        The source code is on
+        <a href="https://github.com/rgrossharv/LeanTeX" target="_blank" rel="noreferrer">GitHub</a>.
         <br><br>
       </div>
     </div>
