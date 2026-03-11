@@ -5,108 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ryland Gross</title>
   <style>
-    :root{
-      --text:#1d1d1d;
-      --muted:#4a4a4a;
-      --rule:#cfc9bc;
-      --link:#1d4f8d;
-      --paper:#f8f7f2;
-      --card:#fffdfa;
-      --title:#111;
-    }
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      font-family: "Palatino Linotype", "Book Antiqua", Palatino, "Iowan Old Style", serif;
-      color: var(--text);
-      background: linear-gradient(180deg, #fcfbf8 0%, var(--paper) 100%);
-    }
-    a{ color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
-    a:hover{ opacity: 0.85; }
-
-    .wrap{
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 56px 28px 70px;
-    }
-
-    .top{
-      display:grid;
-      grid-template-columns: 1fr auto;
-      align-items:start;
-      gap: 28px;
-      margin-bottom: 18px;
-    }
-
-    h1{
-      font-size: 46px;
-      font-weight: 600;
-      letter-spacing: -0.5px;
-      margin: 0 0 48px;
-      color: var(--title);
-      font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
-    }
-
-    .infoGrid{
-      display:grid;
-      grid-template-columns: 180px 1fr;
-      gap: 10px 32px;
-      max-width: 680px;
-      font-size: 19px;
-      line-height: 1.45;
-    }
-    .label{
-      font-weight: 600;
-      color: var(--muted);
-    }
-
-    .sectionRow{
-      display:grid;
-      grid-template-columns: 220px 1fr;
-      gap: 28px 36px;
-      align-items:start;
-      font-size: 19px;
-      line-height: 1.6;
-      background: var(--card);
-      border: 1px solid var(--rule);
-      border-radius: 14px;
-      padding: 20px 22px;
-    }
-    .sectionTitle{
-      font-weight: 700;
-      font-size: 26px;
-      color: var(--title);
-      font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
-    }
-    .subTitle{
-      font-weight: 700;
-      font-size: 22px;
-      color: var(--title);
-      font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
-    }
-
-    .mono{
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-      "Liberation Mono", "Courier New", monospace;
-    }
-
-    hr{
-      border:0;
-      border-top: 1px solid var(--rule);
-      margin: 48px 0 32px;
-    }
-
-    ol {
+    * { box-sizing: border-box; }
+    body {
       margin: 0;
-      padding-left: 24px;
+      background: #f8f8f2;
+      color: #222;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+      padding: 40px 24px;
     }
-
-    @media (max-width: 850px) {
-      .top, .sectionRow {
-        grid-template-columns: 1fr;
+    a {
+      color: #0645ad;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #0b0080;
+    }
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin: 0 0 0.3em;
+    }
+    h2 {
+      font-size: 1.7em;
+      margin: 0 0 0.5em;
+    }
+    h3 {
+      font-size: 1.35em;
+      margin: 0 0 0.3em;
+    }
+    .infoGrid {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 6px 18px;
+      font-size: 1.05em;
+    }
+    .label {
+      font-weight: 700;
+    }
+    .photo img {
+      max-width: 180px;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid #bfbfb5;
+      margin: 28px 0;
+    }
+    .section {
+      font-size: 1.1em;
+    }
+    @media (max-width: 760px) {
+      .top {
+        flex-direction: column;
       }
-      .infoGrid {
-        grid-template-columns: 120px 1fr;
+      .photo img {
+        max-width: 220px;
       }
     }
   </style>
@@ -130,8 +100,8 @@
         </div>
       </div>
 
-      <div class="photoWrap">
-        <div class="photo" aria-label="Profile photo">
+      <div class="photo">
+        <div aria-label="Profile photo">
           <img src="assets/headshot.jpg" alt="Ryland Gross"
                onerror="this.remove(); this.parentElement.textContent='RG';" />
         </div>
@@ -140,8 +110,8 @@
 
     <hr />
 
-    <div class="sectionRow">
-      <div class="sectionTitle">About</div>
+    <div class="section">
+      <h2>About</h2>
       <div>
         I’m a student at Harvard and currently a course assistant
         for Math 157 under Nathan Chen.
@@ -157,14 +127,14 @@
 
     <hr />
 
-    <div class="sectionRow">
-      <div class="sectionTitle">Projects</div>
+    <div class="section">
+      <h2>Projects</h2>
       <div>
-        <div class="subTitle">
+        <h3>
           <a href="https://rgrossharv.github.io/LeanTeX/" target="_blank" rel="noreferrer">
             LeanTeX
           </a>
-        </div>
+        </h3>
         <br>
         I am also actively working on LeanTeX, a toolchain for embedding Lean 4 snippets directly in LaTeX and rendering Lean output/diagnostics in the compiled PDF.
         The source code is on
