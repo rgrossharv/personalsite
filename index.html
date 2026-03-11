@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ryland Gross</title>
+  <style>
+    :root{
+      --text:#111;
+      --muted:#333;
+      --light:#f7f7f7;
+      --rule:#222;
+      --link:#1a0dab;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: #fff;
+    }
+    a{ color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover{ opacity: 0.85; }
+
+    .wrap{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 56px 28px 70px;
+    }
+
+    .top{
+      display:grid;
+      grid-template-columns: 1fr auto;
+      align-items:start;
+      gap: 28px;
+      margin-bottom: 18px;
+    }
+
+    h1{
+      font-size: 44px;
+      font-weight: 500;
+      letter-spacing: -0.5px;
+      margin: 0 0 48px;
+    }
+
+    .infoGrid{
+      display:grid;
+      grid-template-columns: 180px 1fr;
+      gap: 10px 32px;
+      max-width: 680px;
+      font-size: 20px;
+      line-height: 1.45;
+    }
+    .label{
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .sectionRow{
+      display:grid;
+      grid-template-columns: 220px 1fr;
+      gap: 28px 36px;
+      align-items:start;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+    .sectionTitle{
+      font-weight: 700;
+      font-size: 26px;
+    }
+    .subTitle{
+      font-weight: 700;
+      font-size: 22px;
+    }
+
+    .mono{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
+    }
+
+    hr{
+      border:0;
+      border-top: 1px solid var(--rule);
+      margin: 48px 0 32px;
+    }
+
+    ol {
+      margin: 0;
+      padding-left: 24px;
+    }
+
+    @media (max-width: 850px) {
+      .top, .sectionRow {
+        grid-template-columns: 1fr;
+      }
+      .infoGrid {
+        grid-template-columns: 120px 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="top">
+      <div>
+        <h1>Ryland Gross</h1>
+
+        <div class="infoGrid">
+          <div class="label">Email</div>
+          <div><a href="mailto:rylandgross25@gmail.com">rylandgross25@gmail.com</a></div>
+
+          <div class="label">GitHub</div>
+          <div><a href="https://github.com/rgrossharv" target="_blank" rel="noreferrer">
+            github.com/rgrossharv
+          </a></div>
+        </div>
+      </div>
+
+      <div class="photoWrap">
+        <div class="photo" aria-label="Profile photo">
+          <img src="assets/headshot.jpg" alt="Ryland Gross"
+               onerror="this.remove(); this.parentElement.textContent='RG';" />
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="sectionRow">
+      <div class="sectionTitle">About</div>
+      <div>
+        I’m a student at Harvard and currently a course assistant
+        for Math 157 under Nathan Chen.
+        <br><br>
+        I’m interested in formal methods and in applying it
+        to problems and theorems in economics and computation.
+        <br><br>
+        In mathematics, I’m particularly interested in commutative algebra and hyperreal analysis.
+        <br><br>
+        Currently, I'm working on formalizing some things in prospect theory.
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="sectionRow">
+      <div class="sectionTitle">Projects</div>
+      <div>
+        <div class="subTitle">
+          <a href="https://github.com/rgrossharv/LeanTeX" target="_blank" rel="noreferrer">
+            LeanTeX
+          </a>
+        </div>
+        <br>
+        I am also actively working on LeanTeX, a toolchain for embedding Lean 4 snippets directly in LaTeX and rendering Lean output/diagnostics in the compiled PDF.
+        <br><br>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
