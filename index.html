@@ -71,6 +71,20 @@
     .section {
       font-size: 1.1em;
     }
+    .top-photo img {
+      max-width: 260px;
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+    }
+    .top-photo figcaption {
+      font-size: 0.85em;
+      color: #666;
+      margin-top: 5px;
+      font-style: italic;
+      text-align: center;
+    }
     @media (max-width: 760px) {
       .top {
         flex-direction: column;
@@ -81,49 +95,38 @@
     }
   </style>
 </head>
-
 <body>
   <div class="wrap">
-
     <div class="top">
       <div>
         <h1>Ryland Gross</h1>
-
         <div class="infoGrid">
           <div class="label">Email</div>
           <div><a href="mailto:rylandgross@college.harvard.edu">rylandgross@college.harvard.edu</a></div>
-
           <div class="label">GitHub</div>
           <div><a href="https://github.com/rgrossharv" target="_blank" rel="noreferrer">
             github.com/rgrossharv
           </a></div>
         </div>
       </div>
-
-      <div class="photo">
-        <div aria-label="Profile photo">
-          <img src="assets/headshot.jpg" alt="Ryland Gross"
-               onerror="this.remove(); this.parentElement.textContent='RG';" />
-        </div>
-      </div>
+      <figure class="top-photo">
+        <img src="assets/484473033_995119072626189_1549417242170378928_n.jpg" alt="Ryland Gross in the mountains" />
+        <figcaption>Somewhere in the mountains.</figcaption>
+      </figure>
     </div>
-
     <hr />
-
     <div class="section">
       <h2>About</h2>
       <div>
-        I’m a student at Harvard and currently a course assistant
-        for Math 157 under Nathan Chen. In mathematics, I’m particularly
+        I'm a student at Harvard and currently a course assistant
+        for Math 157 under Nathan Chen. In mathematics, I'm particularly
         interested in commutative algebra, formalization, and hyperreal analysis.
         Recently, I've also become interested in economics. 
         <br><br>
         Currently, I'm working on formalizing the Allais Paradox.
       </div>
     </div>
-
     <hr />
-
     <div class="section">
       <h2>Projects</h2>
       <div>
@@ -137,7 +140,6 @@
         The source code is here:
         <a href="https://github.com/rgrossharv/LeanTeX" target="_blank" rel="noreferrer">GitHub</a>.
         <br><br>
-
         <h3>
           <a href="https://graphtotex.com" target="_blank" rel="noreferrer">
             GraphToTeX
@@ -150,7 +152,6 @@
         <br><br>
       </div>
     </div>
-
   </div>
 </body>
 </html>
