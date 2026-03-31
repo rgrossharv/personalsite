@@ -32,6 +32,10 @@
       gap: 24px;
       margin-bottom: 28px;
     }
+    .top-left {
+      flex: 1;
+      min-width: 0;
+    }
     h1, h2, h3 {
       font-family: Georgia, "Times New Roman", serif;
       font-weight: 700;
@@ -57,12 +61,6 @@
     .label {
       font-weight: 700;
     }
-    .photo img {
-      max-width: 180px;
-      width: 100%;
-      height: auto;
-      display: block;
-    }
     hr {
       border: 0;
       border-top: 1px solid #bfbfb5;
@@ -70,6 +68,13 @@
     }
     .section {
       font-size: 1.1em;
+    }
+    .about-inline {
+      margin-top: 22px;
+      font-size: 1.1em;
+    }
+    .about-inline h2 {
+      margin-bottom: 0.4em;
     }
     .top-photo img {
       max-width: 260px;
@@ -89,8 +94,8 @@
       .top {
         flex-direction: column;
       }
-      .photo img {
-        max-width: 220px;
+      .top-photo img {
+        max-width: 100%;
       }
     }
   </style>
@@ -98,7 +103,7 @@
 <body>
   <div class="wrap">
     <div class="top">
-      <div>
+      <div class="top-left">
         <h1>Ryland Gross</h1>
         <div class="infoGrid">
           <div class="label">Email</div>
@@ -108,23 +113,22 @@
             github.com/rgrossharv
           </a></div>
         </div>
+        <div class="about-inline">
+          <h2>About</h2>
+          <div>
+            I'm a student at Harvard and currently a course assistant
+            for Math 157 under Nathan Chen. In mathematics, I'm particularly
+            interested in commutative algebra, formalization, and hyperreal analysis.
+            Recently, I've also become interested in economics.
+            <br><br>
+            Currently, I'm working on formalizing the Allais Paradox.
+          </div>
+        </div>
       </div>
       <figure class="top-photo">
-        <img src="IMG_8467.jpeg" alt="Ryland Gross in the mountains" />
-        <figcaption>Somewhere in the mountains.</figcaption>
+        <img src="IMG_8467.jpeg" alt="There should be an image here!" />
+        <figcaption>Stepatsminda, Georgia не очень далеко от границы России.</figcaption>
       </figure>
-    </div>
-    <hr />
-    <div class="section">
-      <h2>About</h2>
-      <div>
-        I'm a student at Harvard and currently a course assistant
-        for Math 157 under Nathan Chen. In mathematics, I'm particularly
-        interested in commutative algebra, formalization, and hyperreal analysis.
-        Recently, I've also become interested in economics. 
-        <br><br>
-        Currently, I'm working on formalizing the Allais Paradox.
-      </div>
     </div>
     <hr />
     <div class="section">
