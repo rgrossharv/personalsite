@@ -146,26 +146,15 @@ p {
 
 .portrait-frame {
   margin: 0;
-  position: relative;
-}
-
-.portrait-frame::before {
-  border: 1px solid var(--rule);
-  content: "";
-  inset: 14px -14px -14px 14px;
-  position: absolute;
-  z-index: 0;
 }
 
 .portrait-frame img {
   box-shadow: 0 22px 48px var(--shadow);
   display: block;
-  position: relative;
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: 42% 52%;
-  z-index: 1;
 }
 
 .project-ledger {
@@ -232,7 +221,4 @@ p {
     justify-content: flex-start;
   }
 
-  .portrait-frame::before {
-    inset: 10px -10px -10px 10px;
-  }
 }
