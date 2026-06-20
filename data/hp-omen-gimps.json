@@ -2,9 +2,9 @@
   "name": "HP Omen",
   "mprime": true,
   "status": "mprime running",
-  "assignment": null,
-  "complete": 0,
-  "iteration": null,
-  "lastResult": null,
-  "updated": "2026-06-19T21:56:04.408552-04:00"
+  "assignment": "M147402113",
+  "complete": 0.590222,
+  "iteration": "870,000 / 147,402,113",
+  "lastResult": "Iteration 870000 / 147402113",
+  "updated": "2026-06-19T22:33:47.823965-04:00"
 }
