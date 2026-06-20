@@ -1,8 +1,8 @@
 {
   "machine": "hpomen",
-  "updated": "2026-06-19T20:49:12-04:00",
+  "updated": "2026-06-19T22:23:20-04:00",
   "mprime_running": true,
-  "current_assignment": "M147402137",
+  "current_assignment": "M147402113",
   "percent_complete": "0.0019",
   "current_iteration": "2802",
   "total_iterations": "147402113",
