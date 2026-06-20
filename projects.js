@@ -170,10 +170,12 @@ async function loadStatuses() {
     return;
   }
 
+  const cacheBust = Date.now();
+
   try {
     const machines = await Promise.all(
       statusFiles.map(async (file) => {
-        const response = await fetch(file, { cache: "no-store" });
+        const response = await fetch(`${file}?v=${cacheBust}`, { cache: "no-store" });
         if (!response.ok) {
           throw new Error(`Could not load ${file}`);
         }
