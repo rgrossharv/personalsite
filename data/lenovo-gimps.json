@@ -1,7 +1,7 @@
 {
   "machine": "lenovo",
-  "updated": "2026-06-19T20:27:19-04:00",
-  "mprime_running": false,
+  "updated": "2026-06-19T20:32:09-04:00",
+  "mprime_running": true,
   "current_assignment": "M147401707",
   "percent_complete": "0.0816",
   "current_iteration": "120336",
