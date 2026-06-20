@@ -1,6 +1,6 @@
 {
   "machine": "lenovo",
-  "updated": "2026-06-19T22:11:40-04:00",
+  "updated": "2026-06-19T22:12:50-04:00",
   "mprime_running": true,
   "current_assignment": "M147401707",
   "percent_complete": "0.0816",
@@ -9,6 +9,5 @@
   "completed_assignments_count": "0",
   "last_result": "Iteration 120336 / 147401707",
   "results_modified": "2026-06-19T16:46:15-04:00",
-  "prime_log_modified": "2026-06-19T15:36:37-04:00",
-  "worktodo_modified": "2026-06-19T17:54:21-04:00"
+  "prime_log_modified": "2026-06-19T15:36:37-04:00"
 }
