@@ -176,6 +176,11 @@ p {
   padding-top: 18px;
 }
 
+.project-entry-featured:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
 .project-entry + .project-entry {
   margin-top: 4px;
 }
