@@ -17,15 +17,6 @@
     </header>
 
     <main>
-      <section class="projects-intro" aria-labelledby="projects-title">
-        <p class="section-kicker">Projects</p>
-        <h1 id="projects-title">Tools, notes, and small computations</h1>
-        <p>
-          A few things I have made for mathematical writing, school work, and
-          the occasional useful experiment at home.
-        </p>
-      </section>
-
       <section class="project-ledger" aria-label="Project list">
         <article class="project-entry project-entry-featured">
           <div class="project-meta">Lean 4 / LaTeX</div>
@@ -34,10 +25,25 @@
             <p>
               A LaTeX package for embedding Lean 4 code directly in LaTeX and
               rendering Lean's infoview output in the compiled document. I made
-              it to help with school work where formal code and ordinary
-              mathematical exposition needed to sit closer together.
-              A new release is expected soon.
+              it to help with school work.
             </p>
+          </div>
+        </article>
+
+        <article class="project-entry project-entry-featured">
+          <div class="project-meta">Homelab / GIMPS</div>
+          <div>
+            <h2><a href="https://www.mersenne.org/" target="_blank" rel="noreferrer">Homelab GIMPS Contribution</a></h2>
+            <p>
+              A small weekly snapshot of my old computers running mprime for the
+              Great Internet Mersenne Prime Search.
+            </p>
+            <div class="gimps-grid" id="gimps-status" aria-live="polite">
+              <article class="gimps-card gimps-card-loading">
+                <h3>Loading status</h3>
+                <p>Reading local GIMPS JSON files.</p>
+              </article>
+            </div>
           </div>
         </article>
 
@@ -47,32 +53,10 @@
             <h2><a href="https://graphtotex.com" target="_blank" rel="noreferrer">GraphToTeX</a></h2>
             <p>
               A browser tool for drawing graphs and exporting clean LaTeX/TikZ
-              code. I built it for quick school-work diagramming, when a
-              mathematical note needs a graph more than it needs a full graphics
-              workflow.
+              code. I built it to help with school work.
             </p>
           </div>
         </article>
-      </section>
-
-      <section class="gimps-section" aria-labelledby="gimps-title">
-        <div class="gimps-heading">
-          <div>
-            <p class="section-kicker">Distributed computing / GIMPS</p>
-            <h2 id="gimps-title">Homelab prime search status</h2>
-          </div>
-          <p>
-            A small live-ish snapshot of machines running mprime for the Great
-            Internet Mersenne Prime Search.
-          </p>
-        </div>
-
-        <div class="gimps-grid" id="gimps-status" aria-live="polite">
-          <article class="gimps-card gimps-card-loading">
-            <h3>Loading status</h3>
-            <p>Reading local GIMPS JSON files.</p>
-          </article>
-        </div>
       </section>
     </main>
   </div>
