@@ -1,13 +1,13 @@
 {
   "machine": "hpomen",
-  "updated": "2026-07-22T03:00:07-04:00",
+  "updated": "2026-07-26T03:00:18-04:00",
   "mprime_running": true,
   "current_assignment": "M147402113",
-  "percent_complete": "73.5946",
-  "current_iteration": "108480000",
+  "percent_complete": "80.1345",
+  "current_iteration": "118120000",
   "total_iterations": "147402113",
   "completed_assignments_count": "0",
-  "last_result": "[Worker Jul 22 02:55] Iteration: 108480000 / 147402113 [73.59%], ms/iter: 35.721, ETA: 16d 02:12",
+  "last_result": "[Worker Jul 26 02:56] Iteration: 118120000 / 147402113 [80.13%], ms/iter: 35.795, ETA: 12d 03:09",
   "results_modified": "2026-06-19T16:28:47-04:00",
-  "prime_log_modified": "2026-07-21T16:14:23-04:00"
+  "prime_log_modified": "2026-07-25T16:17:27-04:00"
 }
