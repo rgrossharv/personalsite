@@ -4,6 +4,7 @@ const statusFiles = [
 ];
 
 const statusRoot = document.querySelector("#gimps-status");
+const completedRoot = document.querySelector("#gimps-completed");
 
 function asText(value, fallback = "Unknown") {
   if (value === null || value === undefined || value === "") {
@@ -113,7 +114,6 @@ function renderMachine(data) {
   const percent = asNumber(data.percent_complete);
   const isRunning = data.mprime_running === true;
   const hasRunningState = typeof data.mprime_running === "boolean";
-  const latestCompleted = data.latest_completed;
 
   card.className = "gimps-card";
   header.className = "gimps-card-header";
@@ -146,24 +146,73 @@ function renderMachine(data) {
     makeDetail("Updated", formatTimestamp(data.updated)),
   );
 
-  if (latestCompleted && typeof latestCompleted === "object") {
-    const verification = latestCompleted.verified ? " (verified)" : "";
-    details.append(
-      makeDetail(
-        "Latest completed test",
-        `${asText(latestCompleted.assignment)} — ${asText(latestCompleted.outcome)}${verification}`,
-      ),
-      makeDetail("Test completed", formatTimestamp(latestCompleted.completed_at)),
-      makeDetail(
-        "Proof uploaded",
-        latestCompleted.proof_uploaded === true ? "Yes" : "No",
-      ),
-    );
-  }
-
   card.append(details);
 
   return card;
+}
+
+function completedResultsFrom(machines) {
+  const resultsByAssignment = new Map();
+
+  machines.forEach((machine) => {
+    const results = Array.isArray(machine.completed_assignments)
+      ? machine.completed_assignments
+      : machine.latest_completed
+        ? [machine.latest_completed]
+        : [];
+
+    results.forEach((result) => {
+      if (result && typeof result === "object" && result.assignment) {
+        resultsByAssignment.set(result.assignment, result);
+      }
+    });
+  });
+
+  return [...resultsByAssignment.values()].sort((left, right) =>
+    asText(right.completed_at, "").localeCompare(asText(left.completed_at, "")),
+  );
+}
+
+function renderCompletedResults(machines) {
+  if (!completedRoot) {
+    return;
+  }
+
+  const results = completedResultsFrom(machines);
+  if (results.length === 0) {
+    const empty = document.createElement("p");
+    empty.textContent = "No completed tests have been published yet.";
+    completedRoot.replaceChildren(empty);
+    return;
+  }
+
+  const cards = results.map((result) => {
+    const card = document.createElement("article");
+    const header = document.createElement("div");
+    const title = document.createElement("h4");
+    const state = document.createElement("span");
+    const details = document.createElement("dl");
+
+    card.className = "gimps-completed-result";
+    header.className = "gimps-card-header";
+    state.className = result.verified
+      ? "status-pill status-pill-running"
+      : "status-pill";
+    details.className = "gimps-details";
+    title.textContent = `${asText(result.assignment)} — ${asText(result.outcome)}`;
+    state.textContent = result.verified ? "verified" : "completed";
+
+    header.append(title, state);
+    details.append(
+      makeDetail("Completed", formatTimestamp(result.completed_at)),
+      makeDetail("Proof uploaded", result.proof_uploaded === true ? "Yes" : "No"),
+      makeDetail("RES64", asText(result.res64)),
+    );
+    card.append(header, details);
+    return card;
+  });
+
+  completedRoot.replaceChildren(...cards);
 }
 
 function renderError() {
@@ -201,6 +250,7 @@ async function loadStatuses() {
     );
 
     statusRoot.replaceChildren(...machines.map(renderMachine));
+    renderCompletedResults(machines);
   } catch (error) {
     renderError();
   }

@@ -281,6 +281,32 @@ p {
   grid-column: 1 / -1;
 }
 
+.gimps-completed-section {
+  margin-top: 24px;
+}
+
+.gimps-completed-section > p {
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.gimps-completed-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.gimps-completed-result {
+  background: color-mix(in srgb, var(--accent-soft) 40%, transparent);
+  border-left: 3px solid var(--accent);
+  padding: 16px 18px;
+}
+
+.gimps-completed-result h4 {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
 .resume-sheet {
   background: transparent;
 }
