@@ -113,6 +113,7 @@ function renderMachine(data) {
   const percent = asNumber(data.percent_complete);
   const isRunning = data.mprime_running === true;
   const hasRunningState = typeof data.mprime_running === "boolean";
+  const latestCompleted = data.latest_completed;
 
   card.className = "gimps-card";
   header.className = "gimps-card-header";
@@ -144,6 +145,21 @@ function renderMachine(data) {
     makeDetail("Last result", asText(data.last_result)),
     makeDetail("Updated", formatTimestamp(data.updated)),
   );
+
+  if (latestCompleted && typeof latestCompleted === "object") {
+    const verification = latestCompleted.verified ? " (verified)" : "";
+    details.append(
+      makeDetail(
+        "Latest completed test",
+        `${asText(latestCompleted.assignment)} — ${asText(latestCompleted.outcome)}${verification}`,
+      ),
+      makeDetail("Test completed", formatTimestamp(latestCompleted.completed_at)),
+      makeDetail(
+        "Proof uploaded",
+        latestCompleted.proof_uploaded === true ? "Yes" : "No",
+      ),
+    );
+  }
 
   card.append(details);
 
