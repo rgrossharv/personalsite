@@ -3,81 +3,76 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Projects by Ryland Gross." />
   <title>Projects | Ryland Gross</title>
-  <link rel="stylesheet" href="styles.css?v=20260803" />
+  <link rel="stylesheet" href="styles.css?v=20260818b" />
 </head>
 <body>
   <div class="page-shell">
-    <header class="site-header" aria-label="Site header">
-      <div class="wordmark">Ryland Gross</div>
-      <nav class="nav-links" aria-label="Main navigation">
+    <header class="site-header">
+      <a class="wordmark" href="index.html">Ryland Gross</a>
+      <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="projects.html" aria-current="page">Projects</a>
         <a href="CV.pdf">CV</a>
       </nav>
     </header>
 
-    <main>
-      <section class="project-ledger" aria-label="Project list">
-        <article class="project-entry project-entry-featured">
-          <div class="project-meta">Lean 4 / LaTeX</div>
-          <div>
-            <h2><a href="https://rgrossharv.github.io/LeanTeX/" target="_blank" rel="noreferrer">LeanTeX</a></h2>
-            <p>
-              A LaTeX package for embedding Lean 4 code directly in LaTeX and
-              rendering Lean's infoview output in the compiled document. I made
-              it to help with school work.
-            </p>
-          </div>
-        </article>
+    <main class="projects-list">
+      <article class="project project-primary">
+        <div class="project-name">
+          <h2><a href="https://github.com/rgrossharv/fullyformalatiyahmacdonald" target="_blank" rel="noreferrer">Autoformalization of Atiyah MacDonald (Ongoing)</a></h2>
+          <p class="project-meta">Lean 4 / mathlib</p>
+        </div>
+        <div class="project-copy">
+          <p>
+            An ongoing formalization of <cite>Introduction to Commutative Algebra</cite>
+            in Lean 4, organized across all eleven chapters and built against mathlib.
+          </p>
+        </div>
+      </article>
 
-        <article class="project-entry project-entry-featured">
-          <div class="project-meta">Homelab / GIMPS</div>
-          <div>
-            <h2><a href="https://www.mersenne.org/" target="_blank" rel="noreferrer">Homelab GIMPS Contribution</a></h2>
-            <p>
-              A small weekly snapshot of my old computers running mprime for the
-              Great Internet Mersenne Prime Search.
-            </p>
-            <div class="gimps-grid" id="gimps-status" aria-live="polite">
-              <article class="gimps-card gimps-card-loading">
-                <h3>Loading status</h3>
-                <p>Reading local GIMPS JSON files.</p>
-              </article>
+      <article class="project">
+        <div class="project-name">
+          <h2><a href="https://www.mersenne.org/" target="_blank" rel="noreferrer">GIMPS / distributed computing</a></h2>
+        </div>
+        <div class="project-copy">
+          <p>
+            A few old computers contributing spare cycles to the Great Internet
+            Mersenne Prime Search.
+          </p>
+          <details class="status-drawer">
+            <summary>Machine status and previous work</summary>
+            <div id="gimps-status" aria-live="polite">
+              <p>Loading status&hellip;</p>
             </div>
-            <section class="gimps-completed-section" aria-labelledby="gimps-completed-title">
-              <h3 id="gimps-completed-title">Verified previous work</h3>
-              <p>Completed Mersenne-number tests with uploaded verification proofs.</p>
-              <div class="gimps-completed-list" id="gimps-completed" aria-live="polite">
-                <article class="gimps-completed-result">
-                  <div class="gimps-card-header">
-                    <h4>M147402113 — not prime</h4>
-                    <span class="status-pill status-pill-running">verified</span>
-                  </div>
-                  <dl class="gimps-details">
-                    <div><dt>Completed</dt><dd>August 2, 2026</dd></div>
-                    <div><dt>Proof uploaded</dt><dd>Yes</dd></div>
-                    <div><dt>RES64</dt><dd>7EC50A7B77BB221F</dd></div>
-                  </dl>
-                </article>
-              </div>
-            </section>
-          </div>
-        </article>
+            <div id="gimps-completed" aria-live="polite"></div>
+          </details>
+        </div>
+      </article>
 
-        <article class="project-entry project-entry-featured">
-          <div class="project-meta">TikZ / browser tool</div>
-          <div>
-            <h2><a href="https://graphtotex.com" target="_blank" rel="noreferrer">GraphToTeX</a></h2>
-            <p>
-              A browser tool for drawing graphs and exporting clean LaTeX/TikZ
-              code. I built it to help with school work.
-            </p>
-          </div>
-        </article>
-      </section>
+      <article class="project">
+        <div class="project-name">
+          <h2><a href="https://rgrossharv.github.io/LeanTeX/" target="_blank" rel="noreferrer">LeanTeX</a></h2>
+        </div>
+        <div class="project-copy">
+          <p>
+            A LaTeX package for embedding Lean 4 code and rendering infoview output
+            in compiled documents.
+          </p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-name">
+          <h2><a href="https://graphtotex.com" target="_blank" rel="noreferrer">GraphToTeX</a></h2>
+        </div>
+        <div class="project-copy">
+          <p>A browser tool for drawing graphs and exporting LaTeX/TikZ code.</p>
+        </div>
+      </article>
     </main>
   </div>
-  <script src="projects.js?v=20260803b" defer></script>
+  <script src="projects.js?v=20260818b" defer></script>
 </body>
 </html>
