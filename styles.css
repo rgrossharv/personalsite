@@ -141,6 +141,37 @@ p {
   text-decoration: underline;
 }
 
+.personal-tools {
+  margin-top: 54px;
+}
+
+.personal-tools summary {
+  color: #392f85;
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 700;
+  list-style-position: outside;
+  text-decoration: underline;
+}
+
+.personal-tools summary:hover {
+  color: #7d271f;
+}
+
+.personal-tools details {
+  font-size: 1rem;
+}
+
+.personal-tools-list {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.personal-tools-list p:last-child {
+  margin-bottom: 0;
+}
+
 .gimps-card,
 .gimps-completed-result {
   margin-top: 12px;
