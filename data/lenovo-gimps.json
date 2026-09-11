@@ -1,13 +1,13 @@
 {
   "machine": "lenovo",
-  "updated": "2026-09-10T02:00:02-04:00",
+  "updated": "2026-09-11T02:00:03-04:00",
   "mprime_running": true,
   "current_assignment": "M147401707",
-  "percent_complete": "71.4781",
-  "current_iteration": "105360000",
+  "percent_complete": "72.8146",
+  "current_iteration": "107330000",
   "total_iterations": "147401707",
   "completed_assignments_count": "0",
-  "last_result": "[Worker Sep 10 01:53] Iteration: 105360000 / 147401707 [71.47%], ms/iter: 43.879",
+  "last_result": "[Worker Sep 11 01:57] Iteration: 107330000 / 147401707 [72.81%], ms/iter: 43.892",
   "results_modified": "2026-07-02T14:27:40-04:00",
-  "prime_log_modified": "2026-09-09T13:17:53-04:00"
+  "prime_log_modified": "2026-09-10T13:17:54-04:00"
 }
