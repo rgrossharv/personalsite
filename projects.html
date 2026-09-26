@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Projects by Ryland Gross." />
   <title>Projects | Ryland Gross</title>
-  <link rel="stylesheet" href="styles.css?v=20260818b" />
+  <link rel="stylesheet" href="styles.css?v=20260926" />
 </head>
 <body>
   <div class="page-shell">
@@ -14,43 +14,10 @@
       <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="projects.html" aria-current="page">Projects</a>
-        <a href="CV.pdf">CV</a>
       </nav>
     </header>
 
     <main class="projects-list">
-      <article class="project project-primary">
-        <div class="project-name">
-          <h2><a href="https://github.com/rgrossharv/fullyformalatiyahmacdonald" target="_blank" rel="noreferrer">Autoformalization of Atiyah MacDonald (Ongoing)</a></h2>
-          <p class="project-meta">Lean 4 / mathlib</p>
-        </div>
-        <div class="project-copy">
-          <p>
-            An ongoing formalization of <cite>Introduction to Commutative Algebra</cite>
-            in Lean 4, organized across all eleven chapters and built against mathlib.
-          </p>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project-name">
-          <h2><a href="https://www.mersenne.org/" target="_blank" rel="noreferrer">GIMPS / distributed computing</a></h2>
-        </div>
-        <div class="project-copy">
-          <p>
-            A few old computers contributing spare cycles to the Great Internet
-            Mersenne Prime Search.
-          </p>
-          <details class="status-drawer">
-            <summary>Machine status and previous work</summary>
-            <div id="gimps-status" aria-live="polite">
-              <p>Loading status&hellip;</p>
-            </div>
-            <div id="gimps-completed" aria-live="polite"></div>
-          </details>
-        </div>
-      </article>
-
       <article class="project">
         <div class="project-name">
           <h2><a href="https://rgrossharv.github.io/LeanTeX/" target="_blank" rel="noreferrer">LeanTeX</a></h2>
@@ -63,23 +30,36 @@
         </div>
       </article>
 
-      <article class="project personal-tools">
+      <article class="project">
         <div class="project-name">
-          <details>
-            <summary>Personal tools</summary>
-            <div class="personal-tools-list">
-              <p><a href="https://graphtotex.com" target="_blank" rel="noreferrer">GraphToTeX</a> — a browser tool for drawing graphs and exporting LaTeX/TikZ code.</p>
-              <p><a href="https://russian.rylandgross.com" target="_blank" rel="noreferrer">Russian</a> — Russian vocabulary study tools.</p>
-              <p><a href="https://github.com/rgrossharv/orchardtop" target="_blank" rel="noreferrer">OrchardTop</a> — a system monitor for Apple Silicon Macs; install with <code>brew install rgrossharv/orchardtop/orchardtop</code>.</p>
-            </div>
-          </details>
+          <h2><a href="https://github.com/rgrossharv/fullyformalatiyahmacdonald" target="_blank" rel="noreferrer">Atiyah–Macdonald formalization</a></h2>
+          <p class="project-meta">Lean 4 / mathlib</p>
         </div>
         <div class="project-copy">
-          <p>Some things I find useful and made for myself.</p>
+          <p>
+            An ongoing formalization of <cite>Introduction to Commutative Algebra</cite>
+            in Lean 4, organized across all eleven chapters and built against mathlib.
+          </p>
+          <p class="project-note">This project is substantially behind on commits.</p>
         </div>
       </article>
+
+      <article class="project">
+        <div class="project-name">
+          <h2><a href="https://dobackchess.com/" target="_blank" rel="noreferrer">dobackchess.com</a></h2>
+        </div>
+        <div class="project-copy">
+          <p>
+            A site for playing chess with the do-back rule.
+          </p>
+        </div>
+      </article>
+
+      <p class="project-aside">
+        Also: <a href="https://github.com/rgrossharv/orchardtop" target="_blank" rel="noreferrer">OrchardTop</a>,
+        a small system monitor for Apple Silicon Macs.
+      </p>
     </main>
   </div>
-  <script src="projects.js?v=20260818b" defer></script>
 </body>
 </html>

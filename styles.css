@@ -71,8 +71,8 @@ p {
 
 .home-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
-  gap: 52px;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 42px;
   align-items: center;
 }
 
@@ -115,10 +115,6 @@ p {
   margin-bottom: 36px;
 }
 
-.project-primary {
-  margin-bottom: 54px;
-}
-
 .project-copy p:last-child {
   margin-bottom: 0;
 }
@@ -130,72 +126,15 @@ p {
   font-style: italic;
 }
 
-.status-drawer {
-  margin-top: 8px;
+.project-note,
+.project-aside {
   font-size: 0.9rem;
-}
-
-.status-drawer summary {
-  color: #392f85;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.personal-tools {
-  margin-top: 54px;
-}
-
-.personal-tools summary {
-  color: #392f85;
-  cursor: pointer;
-  font-size: 1.05rem;
-  font-weight: 700;
-  list-style-position: outside;
-  text-decoration: underline;
-}
-
-.personal-tools summary:hover {
-  color: #7d271f;
-}
-
-.personal-tools details {
-  font-size: 1rem;
-}
-
-.personal-tools-list {
-  margin-top: 14px;
-  font-size: 0.9rem;
-  font-weight: 400;
-}
-
-.personal-tools-list p:last-child {
-  margin-bottom: 0;
-}
-
-.gimps-card,
-.gimps-completed-result {
-  margin-top: 12px;
-}
-
-.gimps-card-header {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.gimps-card h4,
-.gimps-card p,
-.gimps-completed-result p {
-  margin-bottom: 0;
-}
-
-.status-pill {
   color: #645e55;
-  font-size: 0.8rem;
 }
 
-.status-pill-running {
-  color: #315a3c;
+.project-aside {
+  margin-top: 4px;
+  font-size: 0.82rem;
 }
 
 @media (max-width: 650px) {
@@ -224,7 +163,7 @@ p {
   }
 
   .portrait {
-    width: min(100%, 320px);
+    width: min(100%, 340px);
   }
 
 }
@@ -236,7 +175,4 @@ p {
     margin-bottom: 32px;
   }
 
-  .project-primary {
-    margin-bottom: 46px;
-  }
 }
