@@ -5,16 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Projects by Ryland Gross." />
   <title>Projects | Ryland Gross</title>
-  <link rel="stylesheet" href="styles.css?v=20260926" />
+  <link rel="stylesheet" href="styles.css?v=20260926c" />
+  <script>
+    (() => {
+      let savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem("theme");
+      } catch (_) {
+        // Use the system preference when storage is unavailable.
+      }
+
+      const theme = savedTheme === "dark" || savedTheme === "light"
+        ? savedTheme
+        : window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
 </head>
 <body>
   <div class="page-shell">
     <header class="site-header">
       <a class="wordmark" href="index.html">Ryland Gross</a>
-      <nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="projects.html" aria-current="page">Projects</a>
-      </nav>
+      <div class="header-actions">
+        <nav aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="projects.html" aria-current="page">Projects</a>
+        </nav>
+        <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Toggle dark mode">
+          <span class="theme-toggle-thumb" aria-hidden="true"></span>
+        </button>
+      </div>
     </header>
 
     <main class="projects-list">
@@ -50,16 +70,23 @@
         </div>
         <div class="project-copy">
           <p>
-            A site for playing chess with the do-back rule.
+            A chess-training site where players can take odds against Stockfish,
+            review their poor moves, and where coaches can run the same training
+            for entire teams.
           </p>
         </div>
       </article>
 
-      <p class="project-aside">
-        Also: <a href="https://github.com/rgrossharv/orchardtop" target="_blank" rel="noreferrer">OrchardTop</a>,
-        a small system monitor for Apple Silicon Macs.
-      </p>
+      <article class="project">
+        <div class="project-name">
+          <h2><a href="https://github.com/rgrossharv/orchardtop" target="_blank" rel="noreferrer">OrchardTop</a></h2>
+        </div>
+        <div class="project-copy">
+          <p>A small system monitor for Apple Silicon Macs.</p>
+        </div>
+      </article>
     </main>
   </div>
+  <script src="theme.js?v=20260926c" defer></script>
 </body>
 </html>

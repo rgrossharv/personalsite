@@ -5,16 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Ryland Gross — pure mathematics and formalization." />
   <title>Ryland Gross</title>
-  <link rel="stylesheet" href="styles.css?v=20260926" />
+  <link rel="stylesheet" href="styles.css?v=20260926c" />
+  <script>
+    (() => {
+      let savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem("theme");
+      } catch (_) {
+        // Use the system preference when storage is unavailable.
+      }
+
+      const theme = savedTheme === "dark" || savedTheme === "light"
+        ? savedTheme
+        : window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
 </head>
 <body>
   <div class="page-shell">
     <header class="site-header">
       <a class="wordmark" href="index.html">Ryland Gross</a>
-      <nav aria-label="Main navigation">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="projects.html">Projects</a>
-      </nav>
+      <div class="header-actions">
+        <nav aria-label="Main navigation">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="projects.html">Projects</a>
+        </nav>
+        <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Toggle dark mode">
+          <span class="theme-toggle-thumb" aria-hidden="true"></span>
+        </button>
+      </div>
     </header>
 
     <main class="home-layout">
@@ -42,5 +62,6 @@
       <img class="portrait" src="IMG_8536.jpeg" alt="Ryland Gross" />
     </main>
   </div>
+  <script src="theme.js?v=20260926c" defer></script>
 </body>
 </html>
