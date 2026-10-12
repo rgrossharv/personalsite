@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Ryland Gross's weekly Imperial College London course schedule." />
+  <title>Weekly Schedule | Ryland Gross</title>
+  <link rel="stylesheet" href="styles.css?v=20261012a" />
+  <script>
+    (() => {
+      let savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem("theme");
+      } catch (_) {
+        // Use the system preference when storage is unavailable.
+      }
+
+      const theme = savedTheme === "dark" || savedTheme === "light"
+        ? savedTheme
+        : window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+</head>
+<body>
+  <div class="page-shell schedule-shell">
+    <header class="site-header">
+      <a class="wordmark" href="index.html">Ryland Gross</a>
+      <div class="header-actions">
+        <nav aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+        </nav>
+        <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Toggle dark mode">
+          <span class="theme-toggle-thumb" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="schedule-heading">
+        <div>
+          <h1>Weekly Schedule</h1>
+          <p id="week-label">This week</p>
+        </div>
+        <div class="schedule-timezone" id="timezone-label"></div>
+      </div>
+
+      <div class="calendar-scroll" aria-label="Weekly course calendar, scroll horizontally on small screens">
+        <div class="calendar-grid" id="calendar-grid">
+          <div class="calendar-head" id="calendar-head"></div>
+          <div class="calendar-body" id="calendar-body"></div>
+        </div>
+      </div>
+
+      <p class="schedule-footnote" id="schedule-note">
+        Only course classes are shown. The supplied week view does not list a Homological Algebra class. These weekly entries run from October 12 through December 12, 2026; times are converted from Europe/London to your detected time zone.
+      </p>
+      <p class="schedule-footnote" id="schedule-status" aria-live="polite"></p>
+    </main>
+  </div>
+  <script src="theme.js?v=20260926c" defer></script>
+  <script src="schedule.js?v=20261012a" defer></script>
+</body>
+</html>
