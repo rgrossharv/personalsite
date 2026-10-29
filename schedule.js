@@ -6,17 +6,14 @@
   const hourHeight = 76;
   const formatterCache = new Map();
   const meetings = [
-    { day: 1, start: "09:00", end: "11:00", title: "Number Theory" },
+    { day: 1, start: "11:00", end: "12:00", title: "Manifolds" },
     { day: 1, start: "15:00", end: "17:00", title: "Formalising Mathematics" },
     { day: 2, start: "10:00", end: "11:00", title: "Algebraic Curves" },
-    { day: 2, start: "12:00", end: "13:00", title: "Commutative Algebra" },
-    { day: 3, start: "09:00", end: "10:00", title: "Number Theory" },
-    { day: 3, start: "10:00", end: "11:00", title: "Commutative Algebra" },
     { day: 4, start: "10:00", end: "12:00", title: "Algebra 4" },
     { day: 4, start: "12:00", end: "13:00", title: "Algebraic Curves" },
-    { day: 4, start: "13:00", end: "14:00", title: "Commutative Algebra" },
     { day: 4, start: "13:00", end: "14:00", title: "Formalising Mathematics" },
     { day: 5, start: "09:00", end: "10:00", title: "Algebraic Curves" },
+    { day: 5, start: "13:00", end: "15:00", title: "Manifolds" },
     { day: 5, start: "15:00", end: "16:00", title: "Algebra 4" }
   ];
 
