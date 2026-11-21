@@ -1,64 +1,57 @@
 :root {
   color-scheme: light;
-  --background: #f8f5ed;
-  --text: #17130d;
+  --background: #ffffff;
+  --text: #171717;
   --link: #392f85;
-  --link-hover: #7d271f;
-  --muted: #645e55;
-  --toggle-track: #d6cfc3;
-  --toggle-border: #9c9488;
-  --toggle-thumb: #fffdf8;
+  --link-hover: #5546ad;
+  --muted: #5e5e5e;
+  --toggle-track: #d4d4d4;
+  --toggle-border: #858585;
+  --toggle-thumb: #ffffff;
+  --calendar-grid: #dddddd;
+  --calendar-grid-minor: #ebebeb;
+  --calendar-surface: #ffffff;
+  --calendar-event: #d6d6d6;
+  --calendar-event-text: #222222;
+  --calendar-now: #4220d8;
 }
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  --background: #181613;
-  --text: #f0ece4;
+  --background: #181818;
+  --text: #f0f0f0;
   --link: #beb7ff;
-  --link-hover: #ffb5a9;
-  --muted: #b5ada1;
-  --toggle-track: #55504a;
-  --toggle-border: #918a80;
-  --toggle-thumb: #f0ece4;
-  --calendar-grid: #49443e;
-  --calendar-grid-minor: #37332f;
-  --calendar-surface: #211e1a;
-  --calendar-event: #d8d5d2;
-  --calendar-event-text: #24211f;
-  --calendar-now: #4220d8;
+  --link-hover: #dedaff;
+  --muted: #b5b5b5;
+  --toggle-track: #525252;
+  --toggle-border: #909090;
+  --toggle-thumb: #f0f0f0;
+  --calendar-grid: #474747;
+  --calendar-grid-minor: #353535;
+  --calendar-surface: #202020;
+  --calendar-now: #a89aff;
 }
 
 @media (prefers-color-scheme: dark) {
   html:not([data-theme]) {
     color-scheme: dark;
-    --background: #181613;
-    --text: #f0ece4;
+    --background: #181818;
+    --text: #f0f0f0;
     --link: #beb7ff;
-    --link-hover: #ffb5a9;
-    --muted: #b5ada1;
-    --toggle-track: #55504a;
-    --toggle-border: #918a80;
-    --toggle-thumb: #f0ece4;
-    --calendar-grid: #49443e;
-    --calendar-grid-minor: #37332f;
-    --calendar-surface: #211e1a;
-    --calendar-event: #d8d5d2;
-    --calendar-event-text: #24211f;
-    --calendar-now: #4220d8;
+    --link-hover: #dedaff;
+    --muted: #b5b5b5;
+    --toggle-track: #525252;
+    --toggle-border: #909090;
+    --toggle-thumb: #f0f0f0;
+    --calendar-grid: #474747;
+    --calendar-grid-minor: #353535;
+    --calendar-surface: #202020;
+    --calendar-now: #a89aff;
   }
 
   html:not([data-theme]) .theme-toggle-thumb {
     transform: translateX(20px);
   }
-}
-
-:root {
-  --calendar-grid: #dedbd4;
-  --calendar-grid-minor: #ebe8e2;
-  --calendar-surface: #fffdf8;
-  --calendar-event: #d8d5d2;
-  --calendar-event-text: #24211f;
-  --calendar-now: #4220d8;
 }
 
 * {
@@ -154,8 +147,8 @@ p {
   align-items: center;
 }
 
-.home-layout p {
-  margin: 0;
+.home-intro p:last-child {
+  margin-bottom: 0;
 }
 
 .profile-photo {
@@ -294,7 +287,7 @@ p {
   flex-direction: column;
   overflow: hidden;
   padding: 5px 6px;
-  border-left: 4px solid #6e6a66;
+  border-left: 4px solid #6b6b6b;
   border-radius: 4px;
   background: var(--calendar-event);
   color: var(--calendar-event-text);
